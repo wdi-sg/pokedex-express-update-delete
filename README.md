@@ -23,6 +23,8 @@ The starter code in this repository builds upon the basics of the previous exerc
 
 * Expose a new DELETE `/:id` endpoint that will delete the pokemon with specified `id` from the `pokedex.json` file
 
+* Add a button on the `pokemon.handlebars` page that says “Delete” that when clicked, sends a DELETE request to `/:id` to delete the pokemon. Upon deletion, redirect the user to the `home.handlebars` page
+
 ## Further
 
 * Add a link in `pokemon.handlebars` that when clicked, redirects the user to the edit page for that pokemon (eg. on `/2`, a user should be able to click a hyperlink that brings her to `/2/edit`) - this will eliminate the need for the user to type the route on the browser address bar
