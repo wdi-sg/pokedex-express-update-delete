@@ -4,7 +4,6 @@ const jsonfile = require('jsonfile');
 
 const FILE = 'pokedex.json';
 
-// post request libs
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
@@ -62,6 +61,8 @@ app.get('/:id', (request, response) => {
 app.get('/', (request, response) => {
   jsonfile.readFile(FILE, (err, obj) => {
     if (err) console.error(err);
+
+    // return home HTML page with all pokemon
     response.render('home', { pokemon: obj.pokemon });
   });
 });
@@ -70,11 +71,15 @@ app.post('/', (request, response) => {
   jsonfile.readFile(FILE, (err, obj) => {
     if (err) console.error(err);
 
+    // add user-submitted pokemon into pokedex object
     let newPokemon = request.body;
     obj.pokemon.push(newPokemon);
 
+    // save updated pokedex object to pokedex.json file
     jsonfile.writeFile(FILE, obj, (err2) => {
       if (err2) console.error(err2);
+
+      // return home HTML page with all pokemon (including newly created one)
       response.render('home', { pokemon: obj.pokemon });
     });
   });
