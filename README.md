@@ -1,8 +1,8 @@
-# Pokedex Express App (with PUT request)
+# Pokedex Express App (with PUT and DELETE requests)
 
 We will build our first web app using Node.js and Express - a Pokedex app.
 
-For this exercise, we will continue building our Pokedex web app. This time, we will set up our server to also accept PUT requests to update existing data, and we will do so using a pre-populated form that the user can submit to update data.
+For this exercise, we will continue building our Pokedex web app. This time, we will set up our server to also accept PUT requests to update existing data, and we will do so using a pre-populated form that the user can submit to update data. We will also be adding a DELETE endpoint to delete any existing data.
 
 The starter code in this repository builds upon the basics of the previous exercise's code ([pokedex-express-post](https://github.com/wdi-sg/pokedex-express-post)).
 
@@ -21,8 +21,10 @@ The starter code in this repository builds upon the basics of the previous exerc
 
 * Expose a new PUT `/:id` endpoint that will receive the form data from the edit form, and save the updated data into `pokedex.json` file
 
+* Expose a new DELETE `/:id` endpoint that will delete the pokemon with specified `id` from the `pokedex.json` file
+
 ## Further
 
-* Add a link in `pokemon.handlebars` that when clicked, redirects the user to the edit page for that pokemon (eg. on `/2`, a user should be able to click a hyperlink that brings her to `/2/edit`)
+* Add a link in `pokemon.handlebars` that when clicked, redirects the user to the edit page for that pokemon (eg. on `/2`, a user should be able to click a hyperlink that brings her to `/2/edit`) - this will eliminate the need for the user to type the route on the browser address bar
 
-* Validate each field to ensure only sensible inputs are accepted before saving to pokedex.json (eg. `name` should not have numbers) ???
+* Validate each field to ensure only sensible inputs are accepted before saving to pokedex.json (eg. `name` should not have numbers)
