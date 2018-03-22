@@ -28,3 +28,7 @@ The starter code in this repository builds upon the basics of the previous exerc
 * Add a link in `pokemon.handlebars` that when clicked, redirects the user to the edit page for that pokemon (eg. on `/2`, a user should be able to click a hyperlink that brings her to `/2/edit`) - this will eliminate the need for the user to type the route on the browser address bar
 
 * Validate each field to ensure only sensible inputs are accepted before saving to pokedex.json (eg. `name` should not have numbers)
+
+## Reference for UPDATE and DELETE
+
+[Here](https://github.com/wdi-sg/express-reference/tree/update) is an example repo with UPDATE and DELETE functionality in the Pokedex app.
